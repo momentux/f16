@@ -264,7 +264,7 @@
             </pushback>
             <livery>
                 <folder type="string">Aircraft/f16/Models/Liveries</folder>
-           </livery>
+            </livery>
         </model>
         <chase-distance-m type="double" archive="y">-25.0</chase-distance-m>
         <!-- original settings
@@ -273,7 +273,7 @@
            <config>
              <pitch-offset-deg>-10.0</pitch-offset-deg>
              <x-offset-m>0.0</x-offset-m>
-             <y-offset-m>0.93</y-offset-m>
+        <y-offset-m>0.93</y-offset-m>
              <z-offset-m>-4.15</z-offset-m>
              <default-field-of-view-deg>55</default-field-of-view-deg>
            </config>
@@ -379,14 +379,14 @@
             <pitch-offset-deg type="double">-30</pitch-offset-deg>
             <heading-offset-deg type="double">0</heading-offset-deg>
             <config>
-              <from-model type="bool">true</from-model>
-              <from-model-idx type="int">0</from-model-idx>
-              <x-offset-m>0.8536</x-offset-m><!-- Right -->
-              <y-offset-m>-1.4121</y-offset-m><!-- Up -->
-              <z-offset-m>-2.5856</z-offset-m><!-- Back -->
-              <pitch-offset-deg type="double"> -30 </pitch-offset-deg>
-              <heading-offset-deg type="double">0</heading-offset-deg>
-              <default-field-of-view-deg type="double">20</default-field-of-view-deg>
+                <from-model type="bool">true</from-model>
+                <from-model-idx type="int">0</from-model-idx>
+                <x-offset-m>0.8536</x-offset-m><!-- Right -->
+                <y-offset-m>-1.4121</y-offset-m><!-- Up -->
+                <z-offset-m>-2.5856</z-offset-m><!-- Back -->
+                <pitch-offset-deg type="double"> -30 </pitch-offset-deg>
+                <heading-offset-deg type="double">0</heading-offset-deg>
+                <default-field-of-view-deg type="double">20</default-field-of-view-deg>
             </config>
         </view>
 
@@ -420,10 +420,10 @@
                         <label>Configuration</label>
                         <name>f16config</name>
                         <binding>
-                          <command>dialog-show</command>
-                          <dialog-name>f16config</dialog-name>
+                            <command>dialog-show</command>
+                            <dialog-name>f16config</dialog-name>
                         </binding>
-                      </item>
+                    </item>
                     <item>
                         <label>Select Livery</label>
                         <binding>
@@ -566,6 +566,18 @@
                 <name>wing flexer property rule</name>
                 <path>Aircraft/f16/Systems/wingflexer.xml</path>
             </autopilot>
+            <autopilot>
+                <name>IT-AUTOFLIGHT</name>
+                <path>Aircraft/f16/Systems/it-autoflight.xml</path>
+            </autopilot>
+            <autopilot>
+                <name>IT-AUTOTHRUST</name>
+                <path>Systems/it-autothrust.xml</path>
+            </autopilot>
+            <autopilot>
+                <name>Gear AGL FT</name>
+                <path>Systems/gear-agl-ft.xml</path>
+            </autopilot>
             <property-rule n="100">
                 <name>Sound properties</name>
                 <path>Aircraft/f16/Systems/sound-rules.xml</path>
@@ -604,10 +616,10 @@
         <fuel>
             <qty-selector type="int">1</qty-selector>
             <external-transfer type="bool">true</external-transfer>
-			<tank-inerting type="bool">false</tank-inerting>
+            <tank-inerting type="bool">false</tank-inerting>
         </fuel>
         <gear>
-			<gear-horn-cutout type="bool">false</gear-horn-cutout>
+            <gear-horn-cutout type="bool">false</gear-horn-cutout>
             <brake-parking type="bool">true</brake-parking>
         </gear>
         <MFD n="0">
@@ -753,9 +765,9 @@
             <total-fuel-lbs-1000 type="double">0</total-fuel-lbs-1000>
             <total-fuel-lbs-10000 type="double">0</total-fuel-lbs-10000>
         </fuel>
-		<fuel-tanks>
-			<serviceable type="bool">true</serviceable>
-		</fuel-tanks>
+        <fuel-tanks>
+            <serviceable type="bool">true</serviceable>
+        </fuel-tanks>
     </consumables>
     <fdm>
         <jsbsim>
@@ -1289,8 +1301,8 @@
             <rwr-unk type="bool">false</rwr-unk>
         </ews>
         <avionics>
-			<probe-heat-switch type="int">0</probe-heat-switch>
-			<probe-heat-light type="bool">false</probe-heat-light>
+            <probe-heat-switch type="int">0</probe-heat-switch>
+            <probe-heat-light type="bool">false</probe-heat-light>
             <dgft type="bool">false</dgft>
             <emer-jett-switch type="bool">false</emer-jett-switch>
             <hud-drift type="int">1</hud-drift><!-- 2: drift c/o 0: reset -->
@@ -1341,8 +1353,8 @@
                 <bulls-eye-lat type="double">37.20</bulls-eye-lat>
                 <bulls-eye-lon type="double">-115.60</bulls-eye-lon>
             </pilot-aid>
-			<rtn-seq type="int">0</rtn-seq>
-			<ded-up-down type="int">0</ded-up-down>
+            <rtn-seq type="int">0</rtn-seq>
+            <ded-up-down type="int">0</ded-up-down>
             <laser-code type="int">0000</laser-code>
             <eegs-wingspan-ft type="int">35</eegs-wingspan-ft>
             <power-mmc type="bool">false</power-mmc>
@@ -1375,9 +1387,9 @@
             <plain-cipher type="int">0</plain-cipher>
             <intercom-volume type="double">0.5</intercom-volume>
             <ils-volume type="double">0.10</ils-volume>
-			<tacan-receive-only type="bool">1</tacan-receive-only>
-			<uhf-radio-display-test type="bool">false</uhf-radio-display-test>
-			<vvi-indicated-speed-fps type="double">0</vvi-indicated-speed-fps>
+            <tacan-receive-only type="bool">1</tacan-receive-only>
+            <uhf-radio-display-test type="bool">false</uhf-radio-display-test>
+            <vvi-indicated-speed-fps type="double">0</vvi-indicated-speed-fps>
             <hud-basic type="bool">false</hud-basic>
             <caution>
                 <master type="bool">false</master>
@@ -1523,17 +1535,17 @@
         </flir>
     </aircraft>
 
-        <!--logging>
-      <log>
+    <!--logging>
+    <log>
        <filename>C:/Users/Nikolai/AppData/Roaming/flightgear.org/Export/trail_test_flightlog.csv</filename>
        <enabled>true</enabled>
-       <interval-ms>25</interval-ms>
+    <interval-ms>25</interval-ms>
        <delimiter>,</delimiter>
        <entry>
         <enabled>true</enabled>
         <title>alt</title>
         <property>logging/missile/altitude-ft</property>
-       </entry>
+    </entry>
        <entry>
         <enabled>true</enabled>
         <title>heading</title>
@@ -1541,7 +1553,7 @@
        </entry>
        <entry>
         <enabled>true</enabled>
-        <title>pitch</title>
+    <title>pitch</title>
         <property>logging/missile/pitch-deg</property>
        </entry>
    </log>
@@ -1604,7 +1616,7 @@
             <!--file>Aircraft/f16/Nasal/MFD/MFD_main.nas</file-->
             <!--<file>Aircraft/f16/Nasal/blackout.nas</file>-->
         </f16>
-        <displays> 
+        <displays>
             <file>Aircraft/f16/Nasal/MFD/display-system.nas</file>
         </displays>
         <liveries>
@@ -1626,10 +1638,10 @@
             <file>Aircraft/f16/Nasal/switches.nas</file>
         </f16_switches>
         <ai>
-          <file>Aircraft/f16/Nasal/AI_list.nas</file>
+            <file>Aircraft/f16/Nasal/AI_list.nas</file>
         </ai>
         <viewMissile>
-          <file>Aircraft/f16/Nasal/MissileView.nas</file>
+            <file>Aircraft/f16/Nasal/MissileView.nas</file>
         </viewMissile>
         <armament>
             <file>Aircraft/f16/Nasal/missile-code.nas</file><!-- must be before station-manager -->
@@ -1654,23 +1666,23 @@
             <file>Aircraft/f16/Nasal/mig28.nas</file>
         </mig28>
         <ded>
-          <file>Aircraft/f16/Nasal/dedFuncs.nas</file>
-          <file>Aircraft/f16/Nasal/ded.nas</file>
+            <file>Aircraft/f16/Nasal/dedFuncs.nas</file>
+            <file>Aircraft/f16/Nasal/ded.nas</file>
         </ded>
         <pfd>
-          <file>Aircraft/f16/Nasal/pfd.nas</file>
+            <file>Aircraft/f16/Nasal/pfd.nas</file>
         </pfd>
         <frd>
-          <file>Aircraft/f16/Nasal/freq-display.nas</file>
+            <file>Aircraft/f16/Nasal/freq-display.nas</file>
         </frd>
         <math_ext2>
-          <file>Aircraft/f16/Nasal/math_ext2.nas</file>
+            <file>Aircraft/f16/Nasal/math_ext2.nas</file>
         </math_ext2>
         <tgp>
-          <file>Aircraft/f16/Nasal/tgp.nas</file>
+            <file>Aircraft/f16/Nasal/tgp.nas</file>
         </tgp>
         <fail>
-          <file>Aircraft/f16/Nasal/failures.nas</file>
+            <file>Aircraft/f16/Nasal/failures.nas</file>
         </fail>
         <gci>
             <file>Aircraft/f16/Nasal/gci-listener.nas</file>
@@ -1713,13 +1725,66 @@
         <airbases>
             <file>Aircraft/f16/Nasal/airbases.nas</file>
         </airbases>
-        <target>
-            <file>Aircraft/f16/Nasal/target.nas</file>
-        </target>
+        <itaf>
+            <file>Nasal/it-autoflight.nas</file>
+        </itaf>
         <!--spaces>
-            <file>Aircraft/f16/Nasal/utils/namespaces.nas</file>
+        <file>Aircraft/f16/Nasal/utils/namespaces.nas</file>
         </spaces-->
     </nasal>
 
+    <it-autoflight>
+        <config>
+            <roll>
+                <kp-low>0.11</kp-low> <!-- Kp at low speed -->
+                <kp-high>0.05</kp-high> <!-- Kp at high speed -->
+                <ti>1.0</ti>
+                <td>0.0001</td>
+            </roll>
+            <pitch>
+                <kp-low>-0.14</kp-low> <!-- Kp at low speed -->
+                <kp-high>-0.06</kp-high> <!-- Kp at high speed -->
+                <ti>0.5</ti>
+                <td>0.001</td>
+            </pitch>
+            <cmd>
+                <alt>-5</alt>
+                <flch-accel>1.5</flch-accel>
+                <roll>1.6</roll>
+            </cmd>
+            <autoland>
+                <pitch-kp>0.0051</pitch-kp>
+                <yaw-kp>-0.05</yaw-kp>
+            </autoland>
+            <rollout>
+                <roll-kp>-0.1</roll-kp>
+                <pitch-nose>0.1</pitch-nose>
+                <pitch-rate>-1.5</pitch-rate>
+                <yaw-kp>-0.02</yaw-kp>
+            </rollout>
+        </config>
+        <settings>
+            <accel-ft type="double">1000</accel-ft> <!-- Acceleration AGL when T/O CLB changes to SPD CLB, 0 to disable -->
+            <auto-bank-limit-calc type="bool">1</auto-bank-limit-calc> <!-- Disable to add a custom auto bank limit schedule -->
+            <autoland-without-ap type="bool">1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
+            <autothrottle-max type="double">0.95</autothrottle-max> <!-- Thrust Max Limit Normalized -->
+            <autothrottle-min type="double">0.02</autothrottle-min> <!-- Thrust Low Limit Normalized -->
+            <bank-max-deg type="double">25</bank-max-deg> <!-- Maximum Bank Limit -->
+            <custom-fma type="bool">0</custom-fma> <!-- Call functions when modes change for a custom FMA to be implemented -->
+            <disable-final type="bool">0</disable-final> <!-- Disable the Final Controllers, for custom FCS integration -->
+            <fd-starts-on type="bool">0</fd-starts-on> <!-- Enable/Disable Flight Director being on by default -->
+            <fd-takeoff-offset type="double">0</fd-takeoff-offset> <!-- Adjust the Flight Director Pitch Bar on ground -->
+            <hdg-hld-separate type="bool">0</hdg-hld-separate> <!-- Separates the HDG HLD mode from the HDG SEL mode -->
+            <land-enable type="bool">1</land-enable> <!-- Enable/Disable Autoland -->
+            <land-flap type="double">0.7</land-flap> <!-- Minimum Flap used for Landing -->
+            <lnav-ft type="double">50</lnav-ft> <!-- AGL when LNAV becomes active if armed -->
+            <retard-enable type="bool">1</retard-enable> <!-- AGL to Thrust Retard -->
+            <retard-ft type="double">50</retard-ft> <!-- Enable Thrust Retard -->
+            <takeoff-hdg-cap type="double">5</takeoff-hdg-cap> <!-- Maximum bank to capture current hdg in T/O mode -->
+            <toga-spd type="double">160</toga-spd> <!-- V2 + 10kts -->
+            <use-controls-engines type="bool">1</use-controls-engines> <!-- Use /controls/engines properties -->
+            <use-controls-flight type="bool">1</use-controls-flight> <!-- Use /controls/flight properties -->
+        </settings>
+    </it-autoflight>
 
 </PropertyList>

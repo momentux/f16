@@ -10,11 +10,11 @@ var apLoop = maketimer(1, func {
 			var gnds_kt = getprop("/velocities/groundspeed-kt");
 			var max_wp   = getprop("/autopilot/route-manager/route/num");
 			var current_course = getprop("/autopilot/route-manager/wp/true-bearing-deg");
-			var wp_fly_to = getprop("/autopilot/route-manager/current-wp") + 1;
-			if (wp_fly_to < 0) {
-				wp_fly_to = 0;
-			}
-			var next_course = getprop("/autopilot/route-manager/route/wp[" ~ wp_fly_to ~ "]/leg-bearing-true-deg");
+			# var wp_fly_to = getprop("/autopilot/route-manager/current-wp") + 1;
+			# if (wp_fly_to < 0) {
+			# 	wp_fly_to = 0;
+			# }
+			var next_course = getprop("/autopilot/route-manager/wp[1]/true-bearing-deg");
 			var delta_angle = math.abs(geo.normdeg180(current_course - next_course));
 			var roll = getprop("fdm/jsbsim/autoflight/output/roll-master");
 			var strg = roll * (getprop("fdm/jsbsim/autoflight/switch-roll") == -1);
