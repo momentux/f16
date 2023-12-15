@@ -567,16 +567,16 @@
                 <path>Aircraft/f16/Systems/wingflexer.xml</path>
             </autopilot>
             <autopilot>
+                <name>Gear AGL FT</name>
+                <path>Aircraft/f16/Systems/gear-agl-ft.xml</path>
+            </autopilot>
+            <autopilot>
                 <name>IT-AUTOFLIGHT</name>
                 <path>Aircraft/f16/Systems/it-autoflight.xml</path>
             </autopilot>
             <autopilot>
                 <name>IT-AUTOTHRUST</name>
                 <path>Systems/it-autothrust.xml</path>
-            </autopilot>
-            <autopilot>
-                <name>Gear AGL FT</name>
-                <path>Systems/gear-agl-ft.xml</path>
             </autopilot>
             <property-rule n="100">
                 <name>Sound properties</name>
@@ -1599,9 +1599,9 @@
         <controls>
             <file>Aircraft/f16/Nasal/f16_controls.nas</file>
         </controls>
-        <autoflight>
+        <!-- <autoflight>
             <file>Aircraft/f16/Nasal/autoflight.nas</file>
-        </autoflight>
+        </autoflight> -->
         <datalink>
             <file>Aircraft/f16/Nasal/datalink.nas</file>
         </datalink>
