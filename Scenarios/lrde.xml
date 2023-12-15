@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <scenario>
+        <name>Targets around VOBG</name>
+        <entry>
+            <callsign>TEJAS1</callsign>
+            <type>aircraft</type>
+            <class>ufo</class>
+            <model>AI/Aircraft/F-15/Models/F-15.xml</model>
+            <flightplan>fp/tgt1.xml</flightplan>
+        </entry>
+        <entry>
+            <callsign>TGT1</callsign>
+            <type>aircraft</type>
+            <class>ufo</class>
+            <model>AI/Aircraft/F-15/Models/F-15.xml</model>
+            <flightplan>fp/tgt2.xml</flightplan>
+        </entry>
+        <entry>
+            <callsign>TGT2</callsign>
+            <type>aircraft</type>
+            <class>ufo</class>
+            <model>AI/Aircraft/F-15/Models/F-15.xml</model>
+            <flightplan>fp/tgt3.xml</flightplan>
+        </entry>
+        <entry>
+            <callsign>TGT3</callsign>
+            <type>aircraft</type>
+            <class>ufo</class>
+            <model>AI/Aircraft/F-15/Models/F-15.xml</model>
+            <flightplan>fp/tgt4.xml</flightplan>
+        </entry>
+    </scenario>
+</PropertyList>
