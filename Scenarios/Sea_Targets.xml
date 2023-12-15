@@ -1,16 +1,15 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-
+  
   <scenario>
-    
-    <name>Moving targets around KXTA</name>
+
 
     <description>
-      The following scenario puts 14 planes in orbit over
-      KXTA.
+      The following scenario puts 130 Sea targets in and around Goa.
 
-      Nikolai V. Chr.
+      Developed by Nikolai V. Chr.
+      Modified by ETPL. 
     </description>
     
     <search-order>DATA_ONLY</search-order><!-- "DATA_ONLY", "PREFER_AI", "PREFER_DATA" -->
@@ -47,17 +46,14 @@
                   #alt = alt + 10*up;
                     #node.setDoubleValue(alt);
                     
-                  var nodemode2 = tanker.getNode("controls/flight/lateral-mode", 1);
-                  nodemode2.setValue("roll");
-                  var noderoll = tanker.getNode("controls/flight/target-roll", 1); 
-                  # Get the current roll value
-                  var currentRoll = noderoll.getValue();
-                  # Increment the current roll by 1
-                  var newRoll = currentRoll + 1; 
-                  # Set the new roll value
-                  noderoll.setValue(newRoll);
-                  tanker.getNode("rotors/main/blade[3]/position-deg", 1 ).setDoubleValue(rand());#chaff
-                  tanker.getNode("rotors/main/blade[3]/flap-deg", 1 ).setDoubleValue(rand());#flare
+                    if (rand()>0.75) {
+                      var nodemode2 = tanker.getNode("controls/flight/lateral-mode", 1);
+                      nodemode2.setValue("roll");
+                      var noderoll = tanker.getNode("controls/flight/target-roll", 1);
+                      noderoll.setValue(0+rand()*90);
+                    }
+                    tanker.getNode("rotors/main/blade[3]/position-deg", 1 ).setDoubleValue(rand());#chaff
+                    tanker.getNode("rotors/main/blade[3]/flap-deg", 1 ).setDoubleValue(rand());#flare
                 }
               }
               if (finish == 0) {
@@ -81,7 +77,7 @@
               }
               print("Scenario proper unloaded.");
               foreach( var tanker; props.globals.getNode("/ai/models",1).getChildren("ship") ) {
-                var callsign = tanker.getNode("name").getValue();
+                var callsign = tanker.getNode("name").getValue();F
                 if( !string.match(callsign,"Humvee*") ) continue;
                 tanker.remove(); # hmm, shouldn't be needed,  but is :(              
               }
@@ -98,28 +94,38 @@
           ]]>
       </unload>
     </nasal>
-
-   
     <entry>
-      <name>Tanker-1</name>
-      <callsign>Slow-evading-target</callsign>
-      <type>aircraft</type>
-      <class>jet_fighter</class>
-      <altitude-ft>15000</altitude-ft>
-      <speed-ktas>300</speed-ktas>
-      <bank>-90</bank>
-
-      <TACAN-channel-ID>041X</TACAN-channel-ID>
-      <model>AI/Aircraft/F-15/Models/F-15.xml</model>
-      <fallback-model-index>515</fallback-model-index>
-      <latitude>37.258</latitude>
-      <longitude>-115.797</longitude>
-      <altitude>15000</altitude>
-      <heading>020</heading>
-      <speed>7000</speed>
-      <roll>-80</roll>
+      <type>ship</type>
+      <model>Models/Geometry/sailboat1/sailboat.xml</model>
+      <name>Ship-81</name>
+      <latitude>15.411214</latitude>  
+      <longitude>73.765991</longitude>
+      <speed>6.0</speed>
+      <rudder>3.0</rudder>
     </entry>
-
-  </scenario>
-
+    <entry>
+      <type>ship</type>
+      <model>Models/Maritime/Military/Carrier_A01.xml</model>
+      <latitude>15.429488</latitude>
+      <longitude>73.763967</longitude>
+      <speed>6.0</speed>
+      <rudder>3.0</rudder>
+    </entry>
+    <entry>
+      <type>ship</type>
+      <model>Models/Maritime/Military/Carrier_A01.xml</model>
+      <latitude>15.433131</latitude>
+      <longitude>73.808154</longitude>  
+      <speed>6.0</speed>
+      <rudder>3.0</rudder>
+    </entry>
+     <entry>
+      <type>ship</type>
+      <model>Models/Maritime/Military/Carrier_A01.xml</model>
+      <latitude>15.409100</latitude>
+      <longitude>73.731187</longitude>  
+      <speed>6.0</speed>
+      <rudder>3.0</rudder>
+    </entry>
+       </scenario>
 </PropertyList>

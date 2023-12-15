@@ -1713,6 +1713,9 @@
         <airbases>
             <file>Aircraft/f16/Nasal/airbases.nas</file>
         </airbases>
+        <target>
+            <file>Aircraft/f16/Nasal/target.nas</file>
+        </target>
         <!--spaces>
             <file>Aircraft/f16/Nasal/utils/namespaces.nas</file>
         </spaces-->
