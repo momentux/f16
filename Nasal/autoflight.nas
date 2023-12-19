@@ -237,6 +237,19 @@ props.globals.getNode("instrumentation/tfs/ground-altitude-ft",1).setDoubleValue
 props.globals.getNode("instrumentation/tfs/aft-not-engaged", 1).setBoolValue(0);
 props.globals.getNode("instrumentation/tfs/padding", 1).setDoubleValue(0);
 
+var initialize_ap = func{
+    setprop("/f16/fcs/autopilot-on", 1);
+    setprop("/f16/fcs/switch-pitch-block20", 1);
+    setprop("/f16/fcs/switch-roll-block20", -1);
+};
+
+initialize_apTimer = maketimer(0.25, initialize_ap);
+initialize_apTimer.singleShot = 1;
+
+setlistener("sim/signals/fdm-initialized", func {
+    initialize_apTimer.start();
+});
+
 return;
 
 screen.property_display.add("f16/fcs/adv-mode-sel");
